@@ -42,7 +42,10 @@ function draw()
     {
       for (let i = 0; i < 15; i++)
         {
-          pColor[i] = "white";
+          background(255);
+          pColor[i] = ('gold');
+          p0int[i].resetCoordinates(mouseX, mouseY);
+          sWatch = 0;
         }
 
       let mouse = floor(random(3));
@@ -83,7 +86,7 @@ function draw()
 
     }
   count ++;
-  bAlpha ++;
+  bAlpha += 0.2;
 }
 
 function movePoints()

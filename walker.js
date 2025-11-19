@@ -25,6 +25,12 @@ class walker
     point(this.x,this.y);
   }
 
+  resetCoordinates(x, y)
+  {
+    this.x = x;
+    this.y = y;
+  }
+
   move(i)
   {
     //0 : random walk
@@ -101,8 +107,8 @@ class walker
           this.x += this.xDir * sin(this.xTheta);
           this.y += this.yDir * sin(this.yTheta);
 
-          this.xTheta++;
-          this.yTheta++;
+          this.xTheta+= random(2);
+          this.yTheta+= random(2);
       
     }
 
